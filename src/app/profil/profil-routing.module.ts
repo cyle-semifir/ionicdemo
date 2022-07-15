@@ -6,10 +6,12 @@ import {DetailsComponent} from "./page/details/details.component";
 
 const routes: Routes = [
   {
+    // route par default
     path: '',
     component: ProfilPage
   },
   {
+    // route avec paramètre
     path: 'details/:id',
     component: DetailsComponent
   }

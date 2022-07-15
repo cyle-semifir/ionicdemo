@@ -11,10 +11,12 @@ import {environment} from "../../../environments/environment";
 
 
 export class MapPage implements OnInit {
+  // positions par defaut
   private lattitude: number = 48.52
   private longitude: number = 2.19
   private map;
 
+  // on utilise la geolocalisation
   constructor(private geoloc: Geolocation) {
   }
 
@@ -22,6 +24,7 @@ export class MapPage implements OnInit {
     this.getPosition()
   }
 
+  // methode utilisant la geolocalisation pour avoir la long et latt
   getPosition = () => {
     this.geoloc.getCurrentPosition().then(data => {
       console.log('ok')
@@ -32,6 +35,7 @@ export class MapPage implements OnInit {
     })
   }
 
+  // méthode permettant de créer une map sur google maps avec cordova
   createMap = () => {
     this.map = GoogleMap.create({
       element: document.getElementById('map'),

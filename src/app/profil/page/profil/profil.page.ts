@@ -10,6 +10,7 @@ export class ProfilPage implements OnInit {
 
   private users : [] = []
 
+  // on importe le service
   constructor(private service: ProfilService) {
   }
 
@@ -17,9 +18,9 @@ export class ProfilPage implements OnInit {
     this.getUsers()
   }
 
+  // on récupère les datas du service
   getUsers = () => {
     this.service.getUsers().subscribe(data => {
-      console.log(data)
       this.users = data
     })
   }

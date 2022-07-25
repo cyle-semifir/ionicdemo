@@ -16,8 +16,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'map',
+    redirectTo: 'record',
     pathMatch: 'full'
+  },
+  {
+    path: 'record',
+    loadChildren: () => import('./record/record.module').then( m => m.RecordPageModule)
   },
 ];
 

@@ -25,7 +25,7 @@ export class DetailsComponent implements OnInit {
   }
 
   getUserById = () : any => {
-    // on récupère les données du srvice
+    // on récupère les données du service
     this.service.subject.subscribe(value => this.user = value)
   }
 
